@@ -2,7 +2,7 @@
 
 Projeto para o Desafio Backend em JS da Cubos Academy.
 
-Base do projeto:
+## Base do projeto:
 
 Você acabou de ser contratado pela melhor empresa de tecnologia do mundo: a CUBOS. Sua primeira tarefa como desenvolvedor é criar uma API para um Banco Digital. Esse será um projeto piloto, ou seja, no futuro outras funcionalidades serão implementadas, portanto, dados do banco (nome, agência, etc.) serão imutáveis.
 
@@ -46,7 +46,7 @@ A lista abaixo é para consulta, não significa que todos os status codes precis
 
 ## Listar contas bancárias
 
-GET /contas?senha_banco=Cubos123Bank
+### GET /contas?senha_banco=Cubos123Bank
 
 Esse endpoint deverá listar todas as contas bancárias existentes.
 
@@ -61,7 +61,7 @@ Esse endpoint deverá listar todas as contas bancárias existentes.
         listagem de todas as contas bancárias existentes
 
 ## Criar conta bancária
-## POST /contas
+### POST /contas
 
 Esse endpoint deverá criar uma conta bancária, onde será gerado um número único para identificação da conta (número da conta).
 
@@ -86,7 +86,7 @@ Esse endpoint deverá criar uma conta bancária, onde será gerado um número ú
     Em caso de falha na validação, a resposta deverá possuir status code apropriado, e em seu corpo (body) deverá possuir um objeto com uma propriedade mensagem que deverá possuir como valor um texto explicando o motivo da falha.
 
 ## Atualizar usuário da conta bancária
-## PUT /contas/:numeroConta/usuario
+### PUT /contas/:numeroConta/usuario
 
 Esse endpoint deverá atualizar apenas os dados do usuário de uma conta bancária.
 
@@ -111,7 +111,7 @@ Esse endpoint deverá atualizar apenas os dados do usuário de uma conta bancár
     Em caso de falha na validação, a resposta deverá possuir status code apropriado, e em seu corpo (body) deverá possuir um objeto com uma propriedade mensagem que deverá possuir como valor um texto explicando o motivo da falha.
 
 ## Excluir Conta
-DELETE /contas/:numeroConta
+### DELETE /contas/:numeroConta
 
 Esse endpoint deve excluir uma conta bancária existente.
 
@@ -129,7 +129,7 @@ Esse endpoint deve excluir uma conta bancária existente.
     Em caso de falha na validação, a resposta deverá possuir status code apropriado, e em seu corpo (body) deverá possuir um objeto com uma propriedade mensagem que deverá possuir como valor um texto explicando o motivo da falha.
 
 ## Depositar
-## POST /transacoes/depositar
+### POST /transacoes/depositar
 
 Esse endpoint deverá somar o valor do depósito ao saldo de uma conta válida e registrar essa transação.
 
@@ -149,7 +149,7 @@ Esse endpoint deverá somar o valor do depósito ao saldo de uma conta válida e
     Em caso de falha na validação, a resposta deverá possuir status code apropriado, e em seu corpo (body) deverá possuir um objeto com uma propriedade mensagem que deverá possuir como valor um texto explicando o motivo da falha.
 
 ## Sacar
-## POST /transacoes/sacar
+### POST /transacoes/sacar
 
 Esse endpoint deverá realizar o saque de um valor em uma determinada conta bancária e registrar essa transação.
 
@@ -171,7 +171,7 @@ Esse endpoint deverá realizar o saque de um valor em uma determinada conta banc
     Em caso de falha na validação, a resposta deverá possuir status code apropriado, e em seu corpo (body) deverá possuir um objeto com uma propriedade mensagem que deverá possuir como valor um texto explicando o motivo da falha.
 
 ## Tranferir
-## POST /transacoes/transferir
+### POST /transacoes/transferir
 
 Esse endpoint deverá permitir a transferência de recursos (dinheiro) de uma conta bancária para outra e registrar essa transação.
 
@@ -196,7 +196,7 @@ Esse endpoint deverá permitir a transferência de recursos (dinheiro) de uma co
     Em caso de falha na validação, a resposta deverá possuir status code apropriado, e em seu corpo (body) deverá possuir um objeto com uma propriedade mensagem que deverá possuir como valor um texto explicando o motivo da falha.
 
 ## Saldo
-## GET /contas/saldo?numero_conta=123&senha=123
+### GET /contas/saldo?numero_conta=123&senha=123
 
 Esse endpoint deverá retornar o saldo de uma conta bancária.
 
@@ -214,7 +214,7 @@ Esse endpoint deverá retornar o saldo de uma conta bancária.
         Saldo da conta
 
 ## Extrato
-## GET /contas/extrato?numero_conta=123&senha=123
+### GET /contas/extrato?numero_conta=123&senha=123
 
 Esse endpoint deverá listar as transações realizadas de uma conta específica.
 
