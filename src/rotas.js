@@ -6,17 +6,17 @@ const verificar = require('./intermediarios/verificaTransacao');
 
 const rotas = express.Router();
 
-// rotas de contas
+// rotas contas
 rotas.get("/contas", listarContasBancarias);
 rotas.post("/contas", verificacaoParaCadastrar, criarContaBancaria)
 rotas.put("/contas/:numeroConta/usuario", verificacaoParaAtualizar, atualizarUsuario)
 rotas.delete("/contas/:numeroConta", verificacaoParaExcluir, excluirConta)
 
-// rotas de transações
+// rotas transações
 rotas.post("/transacoes/depositar", verificar.verificacaoParaDepositar, depositar)
 rotas.post("/transacoes/sacar", verificar.verificacaoParaSacar, sacar)
 rotas.post("/transacoes/transferir", verificar.verificacaoParaTransferir, transferir)
 rotas.get("/contas/saldo", verificar.verificacaoParaSaldo, saldo)
 rotas.get("/contas/extrato", verificar.verificacaoParaExtrato, extrato)
 
-module.exports = rotas
+module.exports = rotas;
